@@ -6,15 +6,22 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "baseUrl": "./",
-    "rootDirs": ["./src", "../.redwood/types/mirror/api/src"],
+    "rootDirs": [
+      "./src",
+      "../.redwood/types/mirror/api/src",
+      "./db",
+      "../.redwood/types/mirror/api/db"
+    ],
     "paths": {
       "src/*": ["./src/*", "../.redwood/types/mirror/api/src/*"],
+      "db/*": ["./db/*", "../.redwood/types/mirror/api/db/*"],
       "types/*": ["./types/*"],
       "@redwoodjs/testing": ["../node_modules/@redwoodjs/testing/api"]
     },
     "typeRoots": ["../node_modules/@types", "./node_modules/@types"],
     "types": ["jest"]
   },
-  "include": ["src", "../.redwood/types/includes/all-*", "../.redwood/types/includes/api-*"]
+  "include": ["src", "db", "../.redwood/types/includes/all-*", "../.redwood/types/includes/api-*"]
 }

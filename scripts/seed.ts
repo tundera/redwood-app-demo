@@ -1,9 +1,9 @@
 import task from 'tasuku'
 
-import { seedCoachData } from 'api/db/helpers/coaches'
-import { seedPlayerData } from 'api/db/helpers/players'
-import { seedTeamData } from 'api/db/helpers/teams'
-import { seedColorSchemesData } from 'api/db/helpers/colorSchemes'
+import { seedCoachData } from '$api/db/helpers/coaches'
+import { seedPlayerData } from '$api/db/helpers/players'
+import { seedTeamData } from '$api/db/helpers/teams'
+import { seedColorSchemesData } from '$api/db/helpers/colorSchemes'
 
 // Manually seed via `yarn rw prisma db seed`
 // Seeds automatically with `yarn rw prisma migrate dev` and `yarn rw prisma migrate reset`

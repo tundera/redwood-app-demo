@@ -11,3 +11,23 @@
 /**
  * END --- TAILWIND GENERATOR EDIT
  */
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white dark:bg-black text-white dark:text-black;
+}
+
+#redwood-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

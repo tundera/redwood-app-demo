@@ -1,10 +1,24 @@
 import type { PlayersQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
+import PlayerCard from 'src/components/PlayerCard/PlayerCard'
+import IntersectionSlide from '../IntersectionSlide/IntersectionSlide'
+
 export const QUERY = gql`
   query PlayersQuery {
     players {
       id
+      name
+      slug
+      height
+      weight
+      handle
+      position
+      number
+      team {
+        id
+        handle
+      }
     }
   }
 `
@@ -19,10 +33,17 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ players }: CellSuccessProps<PlayersQuery>) => {
   return (
-    <ul>
-      {players.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
-      })}
+    <ul className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-32 gap-y-16">
+      {players?.map(
+        (player) =>
+          player.team && (
+            <li key={player.handle}>
+              <IntersectionSlide>
+                <PlayerCard player={player} />
+              </IntersectionSlide>
+            </li>
+          ),
+      )}
     </ul>
   )
 }

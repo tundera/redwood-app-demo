@@ -1,6 +1,6 @@
-import { db } from 'api/src/lib/db'
+import { db } from 'src/lib/db'
 
-import colorSchemes from 'api/db/helpers/team-colors.json'
+import colorSchemes from 'db/helpers/team-colors.json'
 
 export const seedColorSchemesData = async () => {
   await db.colorScheme.createMany({

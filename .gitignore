@@ -12,6 +12,4 @@ web/types/graphql.d.ts
 api/types/graphql.d.ts
 
 # local env files
-.env.local
-.env.*.local
-.envrc
+.env

@@ -1,9 +1,9 @@
-import { db } from 'api/src/lib/db'
+import { db } from 'src/lib/db'
 
-import teams from 'api/db/backups/documents/teams.json'
-import players from 'api/db/backups/documents/players.json'
-import coaches from 'api/db/backups/documents/coaches.json'
-import colorSchemes from 'api/db/helpers/team-colors.json'
+import teams from 'db/backups/documents/teams.json'
+import players from 'db/backups/documents/players.json'
+import coaches from 'db/backups/documents/coaches.json'
+import colorSchemes from 'db/helpers/team-colors.json'
 
 export const seedTeamData = async () => {
   for (const team of teams) {

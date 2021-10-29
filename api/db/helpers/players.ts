@@ -1,6 +1,6 @@
-import { db } from 'api/src/lib/db'
+import { db } from 'src/lib/db'
 
-import players from 'api/db/backups/documents/players.json'
+import players from 'db/backups/documents/players.json'
 
 export const seedPlayerData = async () => {
   for (const player of players) {

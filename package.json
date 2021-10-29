@@ -14,7 +14,8 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "pretty-quick": "^3.1.1",
-    "tasuku": "^1.0.2"
+    "tasuku": "^1.0.2",
+    "universal-dotenv": "^3.2.6"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
@@ -28,6 +29,8 @@
     "seed": "yarn rw exec seed"
   },
   "scripts": {
+    "redwood": "node -r universal-dotenv/register ./node_modules/.bin/rw",
+    "rw": "yarn redwood",
     "prepare": "husky install",
     "commit": "cz"
   },
