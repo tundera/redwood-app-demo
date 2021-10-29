@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn rw type-check
+yarn rw lint
+# yarn rw test
