@@ -1,6 +1,8 @@
 import type { PlayersQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
+import { Link, routes } from '@redwoodjs/router'
+
 import PlayerCard from 'src/components/PlayerCard/PlayerCard'
 import IntersectionSlide from '../IntersectionSlide/IntersectionSlide'
 
@@ -18,6 +20,11 @@ export const QUERY = gql`
       team {
         id
         handle
+        name
+        colorScheme {
+          primary
+          secondary
+        }
       }
     }
   }
@@ -39,7 +46,9 @@ export const Success = ({ players }: CellSuccessProps<PlayersQuery>) => {
           player.team && (
             <li key={player.handle}>
               <IntersectionSlide>
-                <PlayerCard player={player} />
+                <Link to={routes.players({ slug: player.slug })}>
+                  <PlayerCard player={player} />
+                </Link>
               </IntersectionSlide>
             </li>
           ),

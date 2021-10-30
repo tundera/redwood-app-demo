@@ -14215,7 +14215,7 @@ prettier-plugin-prisma@^3.3.0:
   resolved "https://registry.yarnpkg.com/prettier-plugin-prisma/-/prettier-plugin-prisma-3.3.0.tgz#3231dd37ff8516b617ed77422190cca5237db68c"
   integrity sha512-axCTxDHYc7PBJQfW1Flda1Uo5g0tev0xyFKWZyRqKi56jlAod+xSuV4nCdcWJGQKsgFuzTNIrU0fAJCtXwSSHQ==
 
-prettier@2.4.1, prettier@^2.2.1:
+prettier@2.4.1, prettier@^2.2.1, prettier@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==

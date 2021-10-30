@@ -1,6 +1,4 @@
-// import type { PlayersQuery } from 'types/graphql'
-
-// import type { CellSuccessProps } from '@redwoodjs/web'
+import { motion } from 'framer-motion'
 
 import { useCloudinaryImage } from 'src/hooks/useCloudinaryImage'
 
@@ -13,7 +11,11 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
   const { imageURL: teamLogo } = useCloudinaryImage(`nba/teams/${player.team.handle}`)
 
   return (
-    <article className="flex flex-col justify-end bg-white dark:bg-gray-900 shadow-2xl w-80 h-48 relative">
+    <motion.article
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="flex flex-col justify-end bg-white dark:bg-gray-900 shadow-2xl w-80 h-48 relative"
+    >
       <img
         src={teamLogo}
         alt="Team logo"
@@ -21,13 +23,7 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
       />
       <div className="pt-2">
         <div className="flex items-end justify-evenly mx-4">
-          <img
-            src={playerSrc}
-            alt="Player headshot"
-            width={120}
-            height={120}
-            className="object-cover relative"
-          />
+          <img src={playerSrc} alt="Player headshot" className="object-cover w-32 h-32 relative" />
           <div className="ml-2">
             <p className="text-sm md:text-md font-medium w-full text-gray-500 dark:text-gray-400 tracking-tight">
               #{player.number} | {player.position}
@@ -60,7 +56,7 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
           <p className="text-xs">{player.position ?? '---'}</p>
         </div>
       </div>
-    </article>
+    </motion.article>
   )
 }
 

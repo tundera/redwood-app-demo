@@ -1,4 +1,4 @@
-import Footer from 'src/components/Footer/Footer'
+import { AnimatePresence, motion } from 'framer-motion'
 
 type MainLayoutProps = {
   children?: React.ReactNode
@@ -6,20 +6,21 @@ type MainLayoutProps = {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="bg-gray-200 dark:bg-gray-700">
-      <div className="flex flex-col px-8 min-h-screen">
-        <nav className="flex items-center justify-between w-full relative max-w-4xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-200  dark:bg-gray-700 bg-opacity-60 dark:text-gray-100">
-          <a href="#skip" className="skip-nav">
-            Skip to content
-          </a>
-          <div className="ml-[-0.60rem]"></div>
-        </nav>
-        <main id="skip" className="flex flex-col justify-center px-8 bg-gray-200 dark:bg-gray-700">
-          {children}
-        </main>
-      </div>
-      <Footer />
-    </div>
+    <AnimatePresence exitBeforeEnter>
+      <motion.main
+        className="flex flex-col flex-grow items-center justify-center text-black bg-white dark:text-white dark:bg-black"
+        animate="enter"
+        exit="exit"
+        initial="initial"
+        variants={{
+          initial: { opacity: 0, y: 5 },
+          enter: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+          exit: { opacity: 0, transition: { duration: 0.1 } },
+        }}
+      >
+        {children}
+      </motion.main>
+    </AnimatePresence>
   )
 }
 
