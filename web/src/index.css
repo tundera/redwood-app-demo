@@ -15,7 +15,3 @@ html {
 body {
   @apply bg-white dark:bg-black text-white dark:text-black;
 }
-
-#redwood-app {
-  @apply flex flex-col items-center min-h-screen w-screen;
-}

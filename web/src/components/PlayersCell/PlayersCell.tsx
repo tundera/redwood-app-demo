@@ -4,7 +4,8 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import { Link, routes } from '@redwoodjs/router'
 
 import PlayerCard from 'src/components/PlayerCard/PlayerCard'
-import IntersectionSlide from '../IntersectionSlide/IntersectionSlide'
+import IntersectionSlide from 'src/components/IntersectionSlide/IntersectionSlide'
+import LoadingSpinner from 'src/components/LoadingSpinner/LoadingSpinner'
 
 export const QUERY = gql`
   query PlayersQuery {
@@ -30,7 +31,11 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => (
+  <div className="flex flex-col items-center justify-center">
+    <LoadingSpinner />
+  </div>
+)
 
 export const Empty = () => <div>Empty</div>
 

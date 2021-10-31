@@ -12,19 +12,34 @@ generator client {
 
 }
 
-// Define your own datamodels here and run `yarn redwood prisma migrate dev`
-// to create migrations for them and apply to your dev DB.
-// TODO: Please remove the following example:
-model UserExample {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model User {
+  id                  Int        @id @default(autoincrement())
+  createdAt           DateTime   @default(now())
+  updatedAt           DateTime   @default(now())
+  email               String     @unique
+  hashedPassword      String
+  salt                String
+  resetToken          String?
+  resetTokenExpiresAt DateTime?
+  roles               UserRole[]
+
+}
+
+model UserRole {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  name      String
+  user      User?    @relation(fields: [userId], references: [id])
+  userId    Int?
+
+  @@unique([name, userId])
 }
 
 model Coach {
   id          String   @id @default(cuid())
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  updatedAt   DateTime @default(now())
   name        String
   handle      String   @unique
   type        String
@@ -36,7 +51,7 @@ model Coach {
 model Player {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now())
   name      String
   handle    String   @unique
   slug      String   @unique
@@ -51,7 +66,7 @@ model Player {
 model ColorScheme {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now())
   primary   String
   secondary String
   team      Team?    @relation(fields: [teamId], references: [id])
@@ -63,7 +78,7 @@ model ColorScheme {
 
 model Team {
   createdAt     DateTime     @default(now())
-  updatedAt     DateTime     @updatedAt
+  updatedAt     DateTime     @default(now())
   id            String       @id @default(cuid())
   name          String       @unique
   handle        String       @unique

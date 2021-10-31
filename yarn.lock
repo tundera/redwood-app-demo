@@ -2347,7 +2347,7 @@
     youch "2.2.2"
     youch-terminal "1.1.1"
 
-"@redwoodjs/api@0.38.0":
+"@redwoodjs/api@0.38.0", "@redwoodjs/api@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/api/-/api-0.38.0.tgz#bc2751b01036201fe388304e3988f13c179f3eec"
   integrity sha512-NR3sMqJB6Tf7TWnjwxcqfPceUpayLkQKXSW3nNnKmGGmPDVkDQtbD2z2op2rGKNm4h5USXZRrcrfRfiu+6YjWg==
@@ -2363,7 +2363,7 @@
     pino-pretty "7.1.0"
     uuid "8.3.2"
 
-"@redwoodjs/auth@0.38.0":
+"@redwoodjs/auth@0.38.0", "@redwoodjs/auth@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.38.0.tgz#5ea0ac194e066c3a2229822393dda16fb5de2a43"
   integrity sha512-v2QwoD4AB8tjfe3xu3XxyidegzFq5poY/QjvEttRPUqNG6/L4Gu/maALgilDMaxxw6Ysq3aa9K/qQ2BUflxBtg==
@@ -2406,7 +2406,7 @@
     terminal-link "2.1.1"
     yargs "16.2.0"
 
-"@redwoodjs/core@0.38.0":
+"@redwoodjs/core@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/core/-/core-0.38.0.tgz#3d6dd994967ec58d39f58764b947925352097ea9"
   integrity sha512-rdbS0Kp4v46w+07/3dT3lxCEDQ5TMzCE38cpx/mPTlsb41BeuILemavISx0dWYsQS63ltB3qahOhiI580SdKcA==
@@ -2486,7 +2486,7 @@
     eslint-plugin-react-hooks "4.2.0"
     prettier "2.4.1"
 
-"@redwoodjs/forms@0.38.0":
+"@redwoodjs/forms@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.38.0.tgz#89a826d85555bfef18373b50de41266ecb8848c5"
   integrity sha512-CSAWiZEhnsrAVs2LZ19BUvfhe38rUTPKSz/xBDmRE/8Y9ZOUe5Kv1nopTNvGn2zgnUUAqIOWx7f3CnP2NTdqiw==
@@ -2496,7 +2496,7 @@
     pascalcase "1.0.0"
     react-hook-form "7.17.5"
 
-"@redwoodjs/graphql-server@0.38.0":
+"@redwoodjs/graphql-server@0.38.0", "@redwoodjs/graphql-server@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/graphql-server/-/graphql-server-0.38.0.tgz#c3b8b1b7713a14fa5a29e35c53043b3c80e7f48c"
   integrity sha512-59pp6BWWAPWV4KYxwknrZclBhd9Hk2jKAzjg8S3pew4oVp7AappbUBFHkyc5QZyYB55vQZs2PiuZlfKdAGaHsg==
@@ -2571,7 +2571,7 @@
     cheerio "1.0.0-rc.10"
     node-fetch "2.6.1"
 
-"@redwoodjs/router@0.38.0":
+"@redwoodjs/router@0.38.0", "@redwoodjs/router@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/router/-/router-0.38.0.tgz#654b66eb0710ea8232989c0e7425ee773315c4db"
   integrity sha512-2PwhviG4LcdQtKAvfjDF2qlK8L9nO06SBtP8S2hJb6BgB/n6ClYd2eqIExuf3j/EugsWIjSjQGqo6oaL0Oeuwg==
@@ -2639,7 +2639,7 @@
     ts-toolbelt "9.6.0"
     whatwg-fetch "3.6.2"
 
-"@redwoodjs/web@0.38.0":
+"@redwoodjs/web@0.38.0", "@redwoodjs/web@^0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.38.0.tgz#e7d86d8e311bb0050e97c74e7d63d4383a17971b"
   integrity sha512-4AkDP0leqKj1dH4bprZxJXx0ApSrvv6E5nhGT3vVErMa92664Pj0+rBOvMnqoIM6w2nUv5+1C/eIgdVIy+4jJA==
